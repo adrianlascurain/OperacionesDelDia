@@ -11,7 +11,7 @@ public class DayOperations {
 		
 		// Generate instances of TellerWindow and include Transactions number as arguments.  
 		// The las element of the array passed to the constructor will be Alex needed number of transactions.
-		TellerWindow tellerWindow = new TellerWindow(new ArrayList<Integer>(Arrays.asList(3,2,5,2,1,2)));
+		TellerWindow tellerWindow = new TellerWindow(new ArrayList<Integer>(Arrays.asList(3,1,5,2,1,2)));
 		
 		System.out.println("Inicio \n");
 		

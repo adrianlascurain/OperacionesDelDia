@@ -53,7 +53,7 @@ public class TellerWindow{
 			if(client instanceof Alex) {
 				client.setWaitedTime(elapsedTime);
 				System.out.println("Posición actual de Alex [" + client.currentposition + "] , operaciones realizadas [" 
-			+ client.getCompletedOperations() + "] , operaciones restantes: " + client.getRemainingOperations());
+			+ client.getCompletedOperations() + "] , operaciones restantes [" + client.getRemainingOperations() + "].");
 				alexWaitTime = client.getWaitedTime();
 				isAlexDone = true;
 			}
