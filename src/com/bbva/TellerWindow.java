@@ -14,6 +14,7 @@ public class TellerWindow{
 	
 	// Constructor
 	public TellerWindow(List<Integer> transactions) {
+		
 		// Add all clients
 		for(int i = 0; i < transactions.size() - 1 ; i++) {
 			clients.add(new Client(transactions.get(i)));
@@ -26,6 +27,7 @@ public class TellerWindow{
 	
 	// Methods
 	public int calculateAlexWaitTime() {
+		
 		// Iterate over the collection  
 		while(!clients.isEmpty() && !isAlexDone) {
 			Iterator<Client> it = clients.iterator();
@@ -33,9 +35,7 @@ public class TellerWindow{
 				doTransacation(it.next(), it);
 			}
 		}
-		
 		return alexWaitTime;
-		
 	}
 	
 	public void doTransacation(Client client, Iterator<Client> iterator) {
@@ -61,22 +61,21 @@ public class TellerWindow{
 			// If any other client has completed his/her operations then delete client from list
 			iterator.remove();
 		}else {
-			
 			// If any client including Alex complete a transaction and still having operation to do then send them to tha tail of queue
 			sendToTail(client);
 		}
-		
 		// Every time a transaction is completed update positions in queue
 		updateQueuePosition();
-		
 	}
 	
 	public void sendToTail(Client client) {
+		
 		// Send a client to tail of queue
 		client.setCurrentePosition(clients.size() - 1);
 	}
 	
 	public void updateQueuePosition() {
+
 		// Iterate over collection
 		Iterator<Client> it = clients.listIterator();
 		while(it.hasNext()) {
@@ -89,6 +88,5 @@ public class TellerWindow{
 			// Make clients go forward in the queue
 			client.goForward();
 		}
-		
 	}
 }

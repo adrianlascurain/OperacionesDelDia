@@ -22,7 +22,6 @@ public class DayOperations {
 		System.out.println("Alex ha esperado [" + waitedTime + "] unidades de tiempo.");
 		
 		System.out.println("\nTermino");
-
 	}
 	
 }
